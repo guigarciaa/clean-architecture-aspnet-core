@@ -9,4 +9,14 @@
   <ItemGroup>
     <ProjectReference Include="..\CleanArch.Domain\CleanArch.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Migrations\" />
+    <None Remove="Context\" />
+    <None Remove="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Context\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
 </Project>
