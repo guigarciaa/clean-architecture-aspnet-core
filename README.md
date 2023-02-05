@@ -2,6 +2,8 @@
 
 This repo is used for the apprenticeship Clean Architecture.
 
+![Structure](./docs/structure.png)
+![Structure](./docs/structure-1.png)
 **References:** 
 * .[NET - Apresentando Clean Architecture](https://youtube.com/watch?v=ZWfrI5Bu6so&si=EnSIkaIECMiOmarE)
 * [.NET - Implementando a Clean Architecture - I](https://youtube.com/watch?v=PjBJznRvJqc&si=EnSIkaIECMiOmarE)
