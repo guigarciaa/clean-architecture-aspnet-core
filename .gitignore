@@ -477,5 +477,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # migrations folder
-app/CleanArch/Data/Migrations
-app/CleanArch/Properties/PublishProfiles
+app/CleanArch/**/Data/Migrations
+app/CleanArch/**/Properties/PublishProfiles
+*.db
