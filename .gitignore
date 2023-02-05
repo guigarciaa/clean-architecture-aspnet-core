@@ -475,3 +475,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# migrations folder
+app/CleanArch/Data/Migrations
+app/CleanArch/Properties/PublishProfiles
