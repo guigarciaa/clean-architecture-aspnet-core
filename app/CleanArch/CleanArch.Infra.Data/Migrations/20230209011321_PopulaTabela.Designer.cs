@@ -11,14 +11,62 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CleanArch.Infra.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230208013024_Initial")]
-    partial class Initial
+    [Migration("20230209011321_PopulaTabela")]
+    partial class PopulaTabela
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.2");
+
+            modelBuilder.Entity("CleanArch.Domain.Entities.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(10, 2)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Caderno espiral 100 fôlhas",
+                            Name = "Caderno",
+                            Price = 9.45m
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Borracha branca",
+                            Name = "Borracha",
+                            Price = 0.75m
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Lápis de cor 12 cores",
+                            Name = "Lápis 12 cores",
+                            Price = 18.30m
+                        });
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {

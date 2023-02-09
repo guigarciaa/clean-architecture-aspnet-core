@@ -16,6 +16,11 @@ This repo is used for the apprenticeship Clean Architecture.
 
 2. dotnet ef --startup-project ../CleanArch.MVC/ migrations add Initial
 
+#### **Update Database**
+1. cd app/CleanArch/CleanArch.Infra.Data 
+
+2. dotnet ef --startup-project ../CleanArch.MVC/  database update
+
 &nbsp;
 
 
