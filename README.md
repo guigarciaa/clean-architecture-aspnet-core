@@ -9,6 +9,7 @@ This repo is used for the apprenticeship Clean Architecture.
 ![Structure](./docs/structure-4.png)
 ![Structure](./docs/structure-5.png)
 ![Structure](./docs/structure-6.png)
+![Structure](./docs/structure-7.png)
 
 &nbsp;
 ## **Migrations**
