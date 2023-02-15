@@ -1,10 +1,12 @@
 ﻿using CleanArch.Infra.IoC;
+using CleanArch.MVC.MappingConfig;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddControllersWithViews();
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddAutoMapperConfiguration();
 
 var app = builder.Build();
 
