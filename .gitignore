@@ -480,3 +480,4 @@ $RECYCLE.BIN/
 app/CleanArch/**/Data/Migrations
 app/CleanArch/**/Properties/PublishProfiles
 app/**/*.db-*
+.DS_Store
