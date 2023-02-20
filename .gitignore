@@ -477,7 +477,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # migrations folder
-app/CleanArch/**/Data/Migrations
+app/CleanArch/**/Migrations
 app/CleanArch/**/Properties/PublishProfiles
 app/**/*.db-*
 .DS_Store

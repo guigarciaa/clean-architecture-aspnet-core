@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+  clean-arc-app:
+      image: ${DOCKER_REGISTRY-}app
+      container_name: clean-arc-app
+      build:
+        context: .
+        dockerfile: .
+      depends_on: 
+        - db
+      ports:
+        - "5261:80"
+      restart: always
+      environment: 
+        - DBHOST=db
+        - ASPNETCORE_ENVIRONMENT=Development
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - "3306:3306"
+    expose: 
+      - 3306
+    volumes:
+      - db-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: hw8vup5e
+      MYSQL_USER: mac
+      MYSQL_PASSWORD: hw8vup5e
+      MYSQL_DATABASE: productsdb
+
+
+volumes:
+  db-volume:
