@@ -28,7 +28,7 @@ namespace CleanArch.Infra.IoC
             services.AddDbContextPool<ApplicationDbContext>(options =>
                   options.UseMySql(mySqlConnStr,
                       ServerVersion.AutoDetect(mySqlConnStr)));
-                      
+
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
