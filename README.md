@@ -14,14 +14,14 @@ This repo is used for the apprenticeship Clean Architecture.
   <img src="./docs/structure-7.png" name="image-name">
 </details> -->
 
-![Structure](./docs/structure.png)
-![Structure](./docs/structure-1.png)
-![Structure](./docs/structure-2.png)
-![Structure](./docs/structure-3.png)
-![Structure](./docs/structure-4.png)
-![Structure](./docs/structure-5.png)
-![Structure](./docs/structure-6.png)
-![Structure](./docs/structure-7.png)
+![Structure](./docs/images/structure.png)
+![Structure](./docs/images/structure-1.png)
+![Structure](./docs/images/structure-2.png)
+![Structure](./docs/images/structure-3.png)
+![Structure](./docs/images/structure-4.png)
+![Structure](./docs/images/structure-5.png)
+![Structure](./docs/images/structure-6.png)
+![Structure](./docs/images/structure-7.png)
 
 &nbsp;
 

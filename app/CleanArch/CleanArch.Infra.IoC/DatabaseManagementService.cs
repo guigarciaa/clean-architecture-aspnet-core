@@ -1,16 +1,17 @@
-using CleanArch.Application.Interfaces;
-using CleanArch.Application.Services;
-using CleanArch.Domain.Interfaces;
 using CleanArch.Infra.Data.Context;
-using CleanArch.Infra.Data.Repositories;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using CleanArch.Domain.Interfaces;
+using CleanArch.Application.Interfaces;
+using CleanArch.Infra.Data.Repositories;
+using CleanArch.Application.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 
 namespace CleanArch.Infra.IoC
 {
-    public static class DependencyInjection
+    public static class DatabaseManagementService
     {
         public static void AddInfrastructure(this IServiceCollection services, IConfiguration config)
         {
@@ -21,9 +22,6 @@ namespace CleanArch.Infra.IoC
             var productsdb = config["MYSQL_DATABASE"] ?? config.GetConnectionString("MYSQL_DATABASE");
 
             string mySqlConnStr = $"server={host}; userid={userid};pwd={password};port={port};database={productsdb}";
-
-            //     services.AddDbContext<ApplicationDbContext>(options =>
-            // options.UseSqlite(mySqlConnStr, b => b.MigrationsAssembly("CleanArch.Infra.Data")));
 
             services.AddDbContextPool<ApplicationDbContext>(options =>
                   options.UseMySql(mySqlConnStr,
@@ -36,6 +34,15 @@ namespace CleanArch.Infra.IoC
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
+        }
+
+        public static void MigrationInitialisation(this IApplicationBuilder app)
+        {
+            using (var serviceScore = app.ApplicationServices.CreateScope())
+            {
+                var serviceDB = serviceScore.ServiceProvider.GetService<ApplicationDbContext>();
+                serviceDB?.Database.Migrate();
+            }
         }
     }
 }
