@@ -2,18 +2,8 @@
 
 This repo is used for the apprenticeship Clean Architecture.
 
-<!-- <details>
-<summary>Details of Application</summary>
-  <img src="./docs/structure.png" name="image-name">
-  <img src="./docs/structure-1.png" name="image-name">
-  <img src="./docs/structure-2.png" name="image-name">
-  <img src="./docs/structure-3.png" name="image-name">
-  <img src="./docs/structure-4.png" name="image-name">
-  <img src="./docs/structure-5.png" name="image-name">
-  <img src="./docs/structure-6.png" name="image-name">
-  <img src="./docs/structure-7.png" name="image-name">
-</details> -->
 
+![Structure](./docs/images/clean-arch-app.png)
 ![Structure](./docs/images/structure.png)
 ![Structure](./docs/images/structure-1.png)
 ![Structure](./docs/images/structure-2.png)
