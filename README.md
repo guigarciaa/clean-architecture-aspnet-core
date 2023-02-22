@@ -2,6 +2,17 @@
 
 This repo is used for the apprenticeship Clean Architecture.
 
+## **Running this app**
+
+---
+
+```console
+foo@bar:~$ ./start.sh
+```
+**Exposed in:** http://localhost:5261/
+
+&nbsp;
+
 ![Structure](./docs/images/clean-arch-app.png)
 ![Structure](./docs/images/structure.png)
 ![Structure](./docs/images/structure-1.png)
@@ -11,16 +22,6 @@ This repo is used for the apprenticeship Clean Architecture.
 ![Structure](./docs/images/structure-5.png)
 ![Structure](./docs/images/structure-6.png)
 ![Structure](./docs/images/structure-7.png)
-
-&nbsp;
-
-## **Running this app**
-
----
-
-```console
-foo@bar:~$ ./start.sh
-```
 
 &nbsp;
 
