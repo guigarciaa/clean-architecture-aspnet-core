@@ -2,7 +2,6 @@
 
 This repo is used for the apprenticeship Clean Architecture.
 
-
 ![Structure](./docs/images/clean-arch-app.png)
 ![Structure](./docs/images/structure.png)
 ![Structure](./docs/images/structure-1.png)
@@ -16,32 +15,36 @@ This repo is used for the apprenticeship Clean Architecture.
 &nbsp;
 
 ## **Running this app**
+
 ---
+
 ```console
 foo@bar:~$ ./start.sh
 ```
 
 &nbsp;
+
 ## **Migrations Manually**
+
 ---
 
 1. ```console
-        foo@bar:~$ cd app/CleanArch/CleanArch.Infra.Data
-    ```
+       foo@bar:~$ cd app/CleanArch/CleanArch.Infra.Data
+   ```
 
-2. ```console 
-        foo@bar:~$ dotnet ef --startup-project ../CleanArch.MVC/ migrations add Initial
-    ```
+2. ```console
+       foo@bar:~$ dotnet ef --startup-project ../CleanArch.MVC/ migrations add Initial
+   ```
 
 #### **Update Database**
 
 1. ```console
-        foo@bar:~$ cd app/CleanArch/CleanArch.Infra.Data
-    ```
+       foo@bar:~$ cd app/CleanArch/CleanArch.Infra.Data
+   ```
 
-2. ```console 
-        foo@bar:~$ dotnet ef --startup-project ../CleanArch.MVC/ database update
-    ```
+2. ```console
+       foo@bar:~$ dotnet ef --startup-project ../CleanArch.MVC/ database update
+   ```
 
 &nbsp;
 
