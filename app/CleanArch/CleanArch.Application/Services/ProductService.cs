@@ -34,10 +34,10 @@ namespace CleanArch.Application.Services
             return _mapper.Map<IEnumerable<ProductViewModel>>(result);
         }
 
-        public async void Remove(int? id)
+        public void Remove(ProductViewModel product)
         {
-            var product = await _productRepository.GetById(id);
-            _productRepository.Remove(product);
+            var mapProduct = _mapper.Map<Product>(product);
+            _productRepository.Remove(mapProduct);
         }
 
         public void Update(ProductViewModel product)

@@ -22,6 +22,7 @@ foo@bar:~$ ./start.sh
 ![Structure](./docs/images/structure-5.png)
 ![Structure](./docs/images/structure-6.png)
 ![Structure](./docs/images/structure-7.png)
+![Structure](./docs/images/structure-8.png)
 
 &nbsp;
 
@@ -66,3 +67,5 @@ foo@bar:~$ ./start.sh
 - [.NET - Implementando a Clean Architecture - V](https://youtube.com/watch?v=IGnE16_j8Ro&si=EnSIkaIECMiOmarE)
 
 - [.NET - Implementando a Clean Architecture - VI](https://youtube.com/watch?v=jJmeVWCDIDk&si=EnSIkaIECMiOmarE)
+
+- [Criando testes unitários em uma aplicação .Net Core já existente](https://youtube.com/watch?v=1-o4nyXsiDc&si=EnSIkaIECMiOmarE)

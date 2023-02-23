@@ -41,6 +41,60 @@ namespace CleanArch.MVC.Controllers
             return View(product);
         }
 
+        [HttpGet("Edit")]
+        public async Task<IActionResult> Edit(int? id) {
+            if(id == null) return NotFound();
+
+            var productVM = await _productService.GetById(id);
+
+            if(productVM == null) return NotFound();
+
+            return View(productVM);
+        }
+
+        [HttpPost("Edit")]
+        public IActionResult Edit([Bind("Id,Name,Description,Price")] ProductViewModel productVM) {
+            if(ModelState.IsValid) {
+                try {
+                    _productService.Update(productVM);
+                }
+                catch (Exception) {
+                    throw;
+                }
+            }
+            return View(productVM);
+        }
+
+        [HttpGet("Details")]
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null) return NotFound();
+
+            var productVM = await _productService.GetById(id);
+
+            if (productVM == null) return NotFound();
+
+            return View(productVM);
+        }
+
+        [HttpGet("Delete")]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null) return NotFound();
+
+            var productVM = await _productService.GetById(id);
+
+            if (productVM == null) return NotFound();
+
+            return View(productVM);
+        }
+
+        [HttpPost("Delete"), ActionName("Delete")]
+        public IActionResult DeleteConfirmed([Bind("Id,Name,Description,Price")] ProductViewModel productVM) {
+            _productService.Remove(productVM);
+            return RedirectToAction("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

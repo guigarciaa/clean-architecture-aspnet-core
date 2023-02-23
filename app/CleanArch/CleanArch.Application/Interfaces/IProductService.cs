@@ -9,6 +9,6 @@ namespace CleanArch.Application.Interfaces
 
         void Add(ProductViewModel product);
         void Update(ProductViewModel product);
-        void Remove(int? id);
+        void Remove(ProductViewModel product);
     }
 }
