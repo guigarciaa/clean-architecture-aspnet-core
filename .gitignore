@@ -481,4 +481,4 @@ app/CleanArch/**/Migrations
 app/CleanArch/**/Properties/PublishProfiles
 app/**/*.db-*
 .DS_Store
-app/init
+./app/init
