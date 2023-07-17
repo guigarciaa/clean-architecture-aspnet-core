@@ -13,7 +13,6 @@ foo@bar:~$ ./start.sh
 
 &nbsp;
 
-![Structure](./docs/images/clean-arch-app.png)
 ![Structure](./docs/images/structure.png)
 ![Structure](./docs/images/structure-1.png)
 ![Structure](./docs/images/structure-2.png)
